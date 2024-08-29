@@ -126,7 +126,7 @@ app.listen(port,()=>{
 
     
 app.get('/',async(req,res)=>{
-    const Details= await Listing.findById("66d0c63526142a4232ae6b3f");
+    const Details= await Listing.findById("66d0db28fe760ce5414b5d59");
 
 res.render('home.ejs',{Details});
 })
