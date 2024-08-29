@@ -1,0 +1,73 @@
+<% layout('../layouts/boilerplate') -%>
+
+<body >
+<div class="back">  <a href="/listings"> <i class="fa-solid fa-arrow-left"></i></a>  
+</div>    <div class="row" style="background-color:rgb(253, 253, 253)">
+    <div class="col-8 offset-2">
+    <form method="post" action="/listings"  novalidate class="frm needs-validation" enctype="multipart/form-data" >
+        <h2 class="mt-2" >Create new listing!</h2>
+
+        <div class="mb-3 mt-3" >
+            <label class="form-label" for="title">Title:   </label>
+            <input class="form-control" class="form-control" type="text"  name="listing[title]" placeholder="Enter the title" required>
+        </div>
+    
+        <div class="mb3">
+            <label class="form-label" for="description">Description:</label>
+        <textarea class="form-control" type="text"  name="listing[description]" placeholder="Enter the description here" required></textarea>
+        </div>
+        
+       
+
+
+        <div class="mb-3">      <label class="form-label" for="image">Upload Image</label>
+            <input class="form-control" type="file"  name="listing[image]"  required>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="mb-3 col-md-4" >
+                <label class="form-label" for="price">Price:</label>
+                <input class="form-control" type="text"   name="listing[price]" placeholder=" Enter the  price" required>
+            </div>
+        
+            <div class="mb-3 col-md">
+                <label  class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text"  name="listing[location]" placeholder=" Enter Location here">
+            </div>
+
+        </div>
+        
+       
+        <div class="mb-3">  <label class="form-label" for="country">Country:</label>
+            <input class="form-control" type="text" name="listing[country]" placeholder=" Enter your country name"></div>
+
+            <div class="mb-3">  <label class="form-label" for="category">Category:</label>
+         <select class="form-control" name="listing[category]" required > 
+            <option value="Mountain">Mountains</option>
+                <option value="Arctic">Arctic</option>
+                <option value="Farms">Farms</option>
+                <option value="House">House</option>
+                <option value="Domes">Domes</option>
+                
+                <option value="Iconic-cities">Iconic-cities</option>
+                <option value="Rooms">Rooms</option>
+                <option value="Bridges">Bridges</option>
+
+                <option value="Boats">Boats</option>
+                <option value="Pools">Pools</option>
+                <option value="Trending">Trending</option>
+
+                <option selected disabled> choose category</option>
+
+         </select>
+        </div>
+
+    <br>
+  <center> <button class="btn btn-danger mb-3 btn-lg ">  Add </button> </center>
+</form>
+</div>
+</div>
+</body>
