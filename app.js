@@ -125,11 +125,11 @@ app.listen(port,()=>{
 
 
     
-// app.get('/',async(req,res)=>{
-//     const Details= await Listing.findById("66bb659ef7459f3a1ff7c863");
+app.get('/',async(req,res)=>{
+    const Details= await Listing.findById("66d0c63526142a4232ae6b3f");
 
-// res.render('home.ejs',{Details});
-// })
+res.render('home.ejs',{Details});
+})
 
 app.all('*',(req,res,next)=>{
     next(new ExpressError(404,"Page not Found"));
